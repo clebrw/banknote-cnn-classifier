@@ -4,3 +4,13 @@ include
 pyvenv.cfg
 __pycache__
 test.py
+
+# Arquivos de logs e checkpoints
+logs/*.pt
+logs/*.json
+
+# Diretório de outputs
+outputs/
+
+# Diretório share
+share/
