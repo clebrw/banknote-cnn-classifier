@@ -21,4 +21,14 @@ SEED = 42
 NUM_RUNS = 10
 
 # Lista de modelos para testar
-MODELS_TO_TEST = ['alexnet','resnet50','densenet121','efficientnet_b0']
+# Modelos originais
+# MODELS_TO_TEST = ['alexnet','resnet50','densenet121','efficientnet_b0']
+
+# Modelos originais + modelos mais recentes
+MODELS_TO_TEST = [
+    # Modelos originais
+    'alexnet', 'resnet50', 'densenet121', 'efficientnet_b0',
+    # Modelos mais recentes
+    'convnext_tiny', 'vit_base_patch16_224', 'swin_tiny_patch4_window7_224', 
+    'efficientnetv2_s', 'mobilenetv3_large_100'
+]

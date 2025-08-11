@@ -5,9 +5,11 @@ from pathlib import Path
 from config import *
 import numpy as np
 
-def train_model(model, train_loader, val_loader, device, model_name, seed, early_stopping=None):
+def train_model(model, train_loader, val_loader, device, model_name, seed, early_stopping=None, learning_rate=None):
     criterion = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    # Usar learning rate específico se fornecido, caso contrário usar o padrão da config
+    lr = learning_rate if learning_rate is not None else LEARNING_RATE
+    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     
     # Adicionando o scheduler
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
