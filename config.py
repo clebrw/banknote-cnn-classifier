@@ -12,13 +12,13 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Configurações de treino
 BATCH_SIZE = 32
-NUM_EPOCHS = 1
+NUM_EPOCHS = 100
 LEARNING_RATE = 0.0001
 EARLY_STOPPING_PATIENCE = 5
 LR_SCHEDULER_FACTOR = 0.1
 LR_SCHEDULER_PATIENCE = 3
 SEED = 42
-NUM_RUNS = 1
+NUM_RUNS = 10
 
 # Lista de modelos para testar
 MODELS_TO_TEST = ['alexnet','resnet50','densenet121','efficientnet_b0']
